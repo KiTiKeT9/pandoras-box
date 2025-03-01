@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ds-bot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60c5d5d3de05b519a37d0e80f684c59a90b68272")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b072736113cee7f9df42fa83e107b31f4dc3f7f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ds-bot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ds-bot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
