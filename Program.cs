@@ -49,7 +49,7 @@ class Program
 		if (message is not SocketUserMessage userMessage || message.Author.IsBot)
 			return;
 
-
+		
 		if (userMessage.Content == "!hello")
 		{
 			// Отправляем ответ
