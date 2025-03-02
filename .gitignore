@@ -3,5 +3,17 @@
 ################################################################################
 
 /.vs/ds-bot/FileContentIndex/c55c31cc-7276-4343-b3e7-af7bdc255dbc.vsidx
-/.vs/ds-bot/FileContentIndex/78c55a11-cf93-4db4-a4dc-2d1285039d2d.vsidx
-/.vs/ds-bot/FileContentIndex
+# Ignore Visual Studio files
+.vs/
+.vscode/
+.idea/
+
+# Ignore build directories
+bin/
+obj/
+
+# Ignore other common temporary files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
