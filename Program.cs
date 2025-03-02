@@ -11,13 +11,26 @@ class Program
 
 	public async Task RunBotAsync()
 	{
-		_client = new DiscordSocketClient();
+		_client = new DiscordSocketClient(new DiscordSocketConfig()
+		{
+			GatewayIntents = GatewayIntents.Guilds |
+							 GatewayIntents.GuildMessages |
+							 GatewayIntents.MessageContent
+		});
 
 		_client.Log += Log;
 		_client.MessageReceived += MessageReceivedAsync;
 
-		// Замените "YOUR_BOT_TOKEN" на токен вашего бота
-		await _client.LoginAsync(TokenType.Bot, "MTM0NTMxODMwMTkyODEyODYwNQ.Gv9m94.PLq78zt7VevijvzShOm2KAbveZoDRBHSG6tpl0");
+		// Получаем токен из переменной окружения
+		string token = Environment.GetEnvironmentVariable("DISCORD_TOKEN");
+
+		if (string.IsNullOrEmpty(token))
+		{
+			Console.WriteLine("Ошибка: переменная окружения DISCORD_TOKEN не установлена!");
+			return;
+		}
+
+		await _client.LoginAsync(TokenType.Bot, token);
 		await _client.StartAsync();
 
 		// Ждем завершения работы
@@ -36,10 +49,12 @@ class Program
 		if (message is not SocketUserMessage userMessage || message.Author.IsBot)
 			return;
 
+
 		if (userMessage.Content == "!hello")
 		{
 			// Отправляем ответ
 			await message.Channel.SendMessageAsync("Привет, мир!");
 		}
+
 	}
 }
