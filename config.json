@@ -1,0 +1,9 @@
+{
+  "token": "",
+  "print": "Бот запущен!",
+  "test_guilds": [1337101541588602952],
+  "censored_words": [""],
+  "welcome_role_id": 1235710068016676900,
+  "welcome_channel_id": 1235710068645691463,
+  "prefix": "!"
+}
